@@ -10,7 +10,7 @@ namespace sample_app
     {
         static void Main(string[] args)
         {
-            Sample502();
+            Sample602();
 
             Console.WriteLine("HelloWorld.");
         }
@@ -97,5 +97,28 @@ namespace sample_app
             Console.WriteLine("合計値：" + sum);
             Console.WriteLine("平均値：" + avg);
         }
+
+        static void Sample601()
+        {
+            Person p1, p2;
+            p1 = new Person();
+            p2 = new Person();
+            p1.name = "山田太郎";
+            p1.age = 19;
+            p2.SetAgeAndName("佐藤花子", 23);
+            p1.ShowAgeAndName();
+            p2.ShowAgeAndName();
+        }
+
+        static void Sample602()
+        {
+            Calc calc = new Calc();
+            int ans1 = calc.Add(1, 2);
+            int ans2 = calc.Add(1, 2, 3);
+
+            Console.WriteLine(ans1);
+            Console.WriteLine(ans2);
+        }
     }
+    
 }
