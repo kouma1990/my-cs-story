@@ -10,7 +10,52 @@ namespace sample_app
     {
         static void Main(string[] args)
         {
+            Sample205();
+
             Console.WriteLine("HelloWorld.");
+        }
+
+        static void Sample101()
+        {
+            Console.WriteLine("HelloWorld.");
+        }
+
+        static void Sample102()
+        {
+            Console.Write(123);
+            Console.WriteLine(456);
+        }
+
+        static void Sample201()
+        {
+            Console.WriteLine("{0} + {1} = {2}", 5, 2, 5 + 2);
+        }
+
+        static void Sample202()
+        {
+            int a;
+            int b = 3;
+            int add, sub;
+            double avg;
+
+            a = 6;
+            add = a + b;
+            sub = a - b;
+            avg = add / 2.0;
+            Console.WriteLine("{0} + {1} = {2}", a, b, add);
+            Console.WriteLine("{0} - {1} = {2}", a, b, sub);
+            Console.WriteLine("{0}と{1}の平均値{2}", a, b, avg);
+        }
+
+        static void Sample205()
+        {
+            string str1, str2;
+            Console.Write("str1=");
+            str1 = Console.ReadLine();
+            Console.Write("str2=");
+            str2 = Console.ReadLine();
+            Console.WriteLine("str1 + str2  = {0}", str1 + str2);
+
         }
     }
 }
