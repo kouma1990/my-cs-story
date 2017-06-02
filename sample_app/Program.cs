@@ -10,7 +10,7 @@ namespace sample_app
     {
         static void Main(string[] args)
         {
-            Sample602();
+            Sample702();
 
             Console.WriteLine("HelloWorld.");
         }
@@ -118,6 +118,15 @@ namespace sample_app
 
             Console.WriteLine(ans1);
             Console.WriteLine(ans2);
+        }
+
+        static void Sample702()
+        {
+            Access a = new Access();
+            a.Data2 = 2;
+            a.ShowDatas();
+            Console.WriteLine("a.data1 = {0}", a.Data1);
+            //Console.WriteLine("a.data2 = {0}", a.Data2);
         }
     }
     
