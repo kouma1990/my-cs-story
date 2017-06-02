@@ -10,7 +10,7 @@ namespace sample_app
     {
         static void Main(string[] args)
         {
-            Sample205();
+            Sample301();
 
             Console.WriteLine("HelloWorld.");
         }
@@ -56,6 +56,22 @@ namespace sample_app
             str2 = Console.ReadLine();
             Console.WriteLine("str1 + str2  = {0}", str1 + str2);
 
+        }
+
+        static void Sample301()
+        {
+            Console.Write("整数値を入力：");
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine("a=" + a);
+
+            if(a>0)
+            {
+                Console.WriteLine("aは正の数です。");
+            } else
+            {
+                Console.WriteLine("aは0以下の数です。");
+            }
+            
         }
     }
 }
