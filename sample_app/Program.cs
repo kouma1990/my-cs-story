@@ -10,7 +10,7 @@ namespace sample_app
     {
         static void Main(string[] args)
         {
-            Sample301();
+            Sample502();
 
             Console.WriteLine("HelloWorld.");
         }
@@ -72,6 +72,30 @@ namespace sample_app
                 Console.WriteLine("aは0以下の数です。");
             }
             
+        }
+
+        static void Sample502()
+        {
+            /*
+            double[] d = new double[3];
+            d[0] = 1.2;
+            d[1] = 3.7;
+            d[2] = 4.1;
+            */
+            double[] d = { 1.2, 3.7, 4.1 };
+            double sum = 0;
+            double avg;
+
+            for(int i=0; i< d.Length; i++)
+            {
+                Console.Write(d[i] + " ");
+                sum += d[i];
+            }
+
+            Console.WriteLine();
+            avg = sum / d.Length;
+            Console.WriteLine("合計値：" + sum);
+            Console.WriteLine("平均値：" + avg);
         }
     }
 }
