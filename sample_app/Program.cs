@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OpenCvSharp;
 
 namespace sample_app
 {
@@ -10,7 +11,14 @@ namespace sample_app
     {
         static void Main(string[] args)
         {
-            Sample702();
+            Mat dst = new Mat(2,2, MatType.CV_64FC(1));
+            dst.Set<double>(0, 0, 10);
+            dst.Set<double>(1, 0, 20);
+            dst.Set<double>(0, 1, 30);
+            dst.Set<double>(1, 1, 40);
+            Console.WriteLine(dst.Get<double>(0, 1));
+
+            //Sample702();
 
             Console.WriteLine("HelloWorld.");
         }
