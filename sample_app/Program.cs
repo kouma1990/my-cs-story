@@ -11,16 +11,43 @@ namespace sample_app
     {
         static void Main(string[] args)
         {
+            /*
             Mat dst = new Mat(2,2, MatType.CV_64FC(1));
             dst.Set<double>(0, 0, 10);
             dst.Set<double>(1, 0, 20);
             dst.Set<double>(0, 1, 30);
             dst.Set<double>(1, 1, 40);
             Console.WriteLine(dst.Get<double>(0, 1));
-
+            */
             //Sample702();
 
+            double pi = compute_pi_by_monte_carlo(100000000);
+
+            Console.WriteLine(pi);
+
             Console.WriteLine("HelloWorld.");
+        }
+
+        static double compute_pi_by_monte_carlo(int sample_point_number)
+        {
+            Random r = new Random();
+            double pi, x, y;
+            int count = 0;
+
+            for(int i=0; i< sample_point_number; i++)
+            {
+                x = r.NextDouble();
+                y = r.NextDouble();
+                if (x * x + y * y < 1)
+                {
+                    count++;
+                }
+            }
+
+            pi = count * 4.0 / sample_point_number;
+
+            return pi;
+
         }
 
         static void Sample101()
@@ -136,6 +163,7 @@ namespace sample_app
             Console.WriteLine("a.data1 = {0}", a.Data1);
             //Console.WriteLine("a.data2 = {0}", a.Data2);
         }
+
     }
     
 }
